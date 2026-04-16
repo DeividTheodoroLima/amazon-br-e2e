@@ -1,0 +1,13 @@
+{
+  "searchTerm": "Smartphone Motorola",
+  "expectedBrand": "Motorola",
+  "expectedMinResults": 1,
+  "sortOptions": {
+    "highToLow": "Preço: Do maior para o menor",
+    "lowToHigh": "Preço: Do menor para o maior"
+  },
+  "urlParams": {
+    "searchKey": "k",
+    "sortDescParam": "price-desc-rank"
+  }
+}

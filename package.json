@@ -1,0 +1,28 @@
+{
+  "name": "amazon-br-e2e-tests",
+  "version": "1.0.0",
+  "author": "Deivid",
+  "description": "Testes automatizados E2E da Amazon Brasil — Cypress + Cucumber + TypeScript",
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "cy:open:prod": "cypress open --env env=prod",
+    "cy:run:prod": "cypress run --browser chrome --env env=prod",
+    "cy:run:headed:prod": "cypress run --headed --env env=prod",
+    "test": "cypress run --spec 'cypress/e2e/features/**/*.feature'",
+    "typecheck": "tsc --noEmit",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure open allure-report",
+    "allure:serve": "npx allure serve allure-results"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "cypress": "^15.13.1",
+    "cypress-on-fix": "^1.1.0",
+    "cypress-real-events": "^1.15.0",
+    "typescript": "^6.0.2",
+    "allure-commandline": "^2.37.0",
+    "allure-cypress": "^3.5.0"
+  }
+}
