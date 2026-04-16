@@ -24,9 +24,11 @@ amazon/
 ├── cypress/
 │   ├── e2e/
 │   │   ├── features/
-│   │   │   └── search-products.feature   # Cenários BDD em Gherkin (pt-BR)
+│   │   │   ├── search-products.feature   # Cenários BDD de busca e carrinho
+│   │   │   └── responsiveness.feature    # Cenários BDD de responsividade
 │   │   └── steps/
-│   │       ├── search-products.steps.ts  # Steps específicos da feature
+│   │       ├── search-products.steps.ts  # Steps da feature de busca/carrinho
+│   │       ├── responsiveness.steps.ts   # Steps da feature de responsividade
 │   │       └── shared.steps.ts           # Steps e hooks globais
 │   ├── support/
 │   │   ├── commands.ts                   # Custom commands do Cypress
@@ -112,7 +114,21 @@ npm run cy:run:headed:prod
 npx cypress run --env env=prod --config "specPattern=**/*.feature" --env TAGS="@ct-001"
 ```
 
-Tags disponíveis: `@search`, `@e2e`, `@autocomplete`, `@ct-001` a `@ct-005`
+Tags disponíveis:
+
+| Tag | Escopo |
+|---|---|
+| `@search` | Todos os cenários de busca de produtos |
+| `@e2e` | Suite completa de busca + carrinho |
+| `@autocomplete` | Cenário de sugestões do autocomplete |
+| `@ct-001` | Busca com termo válido + autocomplete |
+| `@ct-002` | Ordenação por preço |
+| `@ct-003` | Adição ao carrinho |
+| `@ct-004` | Alteração de quantidade |
+| `@ct-005` | Remoção do carrinho |
+| `@responsiveness` | Todos os cenários de responsividade |
+| `@home` | Responsividade dos elementos da home |
+| `@smoke` | Smoke test de responsividade da home |
 
 ---
 
@@ -140,7 +156,7 @@ O relatório exibe: cenários executados, status (passed/failed/skipped), duraç
 
 ## 🗂️ Cenários cobertos
 
-O fluxo automatizado é **Busca de Produtos e Gerenciamento do Carrinho**, cobrindo os seguintes casos de teste:
+### Busca de Produtos e Gerenciamento do Carrinho
 
 | Tag | Cenário | Descrição |
 |---|---|---|
@@ -150,6 +166,13 @@ O fluxo automatizado é **Busca de Produtos e Gerenciamento do Carrinho**, cobri
 | `@ct-003` | Adição ao carrinho | Valida incremento do contador e presença do item |
 | `@ct-004` | Alteração de quantidade | Valida recálculo do subtotal via stepper |
 | `@ct-005` | Remoção do carrinho | Valida remoção do item e zeragem do contador |
+
+### Responsividade
+
+| Tag | Cenário | Descrição |
+|---|---|---|
+| `@home` `@smoke` | Elementos críticos da home | Valida logo, barra de busca e ícone do carrinho nos viewports desktop, tablet e mobile |
+| `@search` | Elementos críticos da listagem | Valida listagem, seletor de ordenação e cards de produto nos viewports desktop, tablet e mobile |
 
 ---
 

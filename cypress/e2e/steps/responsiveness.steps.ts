@@ -1,5 +1,5 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { HomePage, SearchPage } from "../../support/pages";
+import { HomePage, SearchPage } from "@pages";
 
 const home = new HomePage();
 const search = new SearchPage();

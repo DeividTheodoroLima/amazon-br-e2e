@@ -1,5 +1,4 @@
 # language: pt
-
 @search @e2e
 Funcionalidade: Busca de Produtos e Gerenciamento do Carrinho — Amazon Brasil
   Como usuário da Amazon Brasil
