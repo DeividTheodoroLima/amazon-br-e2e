@@ -1,6 +1,6 @@
 # Amazon Brasil — Testes Automatizados E2E
 
-Projeto de automação de testes E2E para a plataforma [Amazon Brasil](https://www.amazon.com.br), desenvolvido como parte de uma avaliação técnica para vaga de QA Sênior.
+Projeto de automação de testes E2E para a plataforma [Amazon Brasil](https://www.amazon.com.br).
 
 ---
 
@@ -9,10 +9,10 @@ Projeto de automação de testes E2E para a plataforma [Amazon Brasil](https://w
 | Ferramenta | Versão | Finalidade |
 |---|---|---|
 | [Cypress](https://www.cypress.io/) | 15.3.0 | Framework de automação E2E |
-| [Cucumber (BDD)](https://github.com/badeball/cypress-cucumber-preprocessor) | ^24.0.1 | Escrita de cenários em Gherkin |
-| [TypeScript](https://www.typescriptlang.org/) | ^6.0.0 | Tipagem estática |
-| [Allure Report](https://allurereport.org/) | ^3.5.0 | Relatório visual de execução |
-| [cypress-real-events](https://github.com/dmtrKovalenko/cypress-real-events) | ^1.15.0 | Eventos reais de mouse/teclado |
+| [Cucumber (BDD)](https://github.com/badeball/cypress-cucumber-preprocessor) | 24.0.1 | Escrita de cenários em Gherkin |
+| [TypeScript](https://www.typescriptlang.org/) | 6.0.0 | Tipagem estática |
+| [Allure Report](https://allurereport.org/) | 3.5.0 | Relatório visual de execução |
+| [cypress-real-events](https://github.com/dmtrKovalenko/cypress-real-events) | 1.15.0 | Eventos reais de mouse/teclado |
 | [esbuild](https://esbuild.github.io/) | via preprocessor | Transpilação rápida do TypeScript |
 
 ---
